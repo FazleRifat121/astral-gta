@@ -237,7 +237,7 @@ main {
 }
 
 .mask-wrapper {
-	mask-image: url("/images/big-hero-text.svg");
+	mask-image: url("/images/astral-logo.png");
 	mask-repeat: no-repeat;
 }
 /* Only apply the mask on large screens */

@@ -74,14 +74,14 @@ const Hero = () => {
 
 			<div>
 				<img
-					src="/images/big-hero-text.svg"
+					src="/images/astral-logo.png"
 					alt="logo"
 					className="size-full object-cover mask-logo"
 				/>
 			</div>
 
 			<div className="fake-logo-wrapper">
-				<img src="/images/big-hero-text.svg" className="overlay-logo" />
+				<img src="/images/astral-logo.png" className="overlay-logo" />
 			</div>
 
 			<ComingSoon />
