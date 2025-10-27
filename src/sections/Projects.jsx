@@ -68,9 +68,9 @@ const Projects = () => {
 	}, [activeProject, showGallery]);
 
 	return (
-		<section className="lucia-life" ref={sectionRef}>
+		<section className="lucia-life z-50" ref={sectionRef}>
 			{/* Left Column Images */}
-			<div className="flex flex-col gap-5 items-end img-box lg:w-1/2 ps-10 mt-96">
+			<div className="flex flex-col gap-5 items-end img-box lg:w-1/2 ps-10 mt-96 ">
 				{projectsData[0] && (
 					<div
 						className="lucia-1"

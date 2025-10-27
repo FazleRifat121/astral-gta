@@ -39,8 +39,8 @@ const ProjectsMobile = ({ projectsData }) => {
 	if (!projectsData || projectsData.length === 0) return null;
 
 	return (
-		<section className="lucia-life-mobile px-5 py-10 min-h-screen lucia-life-content ">
-			<h1 >Projects</h1>
+		<section className="lucia-life-mobile px-5 py-10 min-h-screen lucia-life-content z-50 ">
+			<h1>Projects</h1>
 			<h2 className="text-xl text-center mb-5">
 				Celestial Creations: Illuminating Your World
 			</h2>
