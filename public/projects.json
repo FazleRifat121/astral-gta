@@ -1,0 +1,48 @@
+[
+	{
+		"id": "p-001",
+		"title": "Modern Minimalist Living Room",
+		"description": "A sleek, modern living room emphasizing clean lines, neutral tones, and minimalistic furniture. Natural light and open space bring a sense of serenity.",
+		"images": [
+			"../src/assets/Projects/Modern Minimalist Living Room/living1.jpg",
+			"../src/assets/Projects/Modern Minimalist Living Room/living2.jpg",
+			"../src/assets/Projects/Modern Minimalist Living Room/living3.jpg",
+			"../src/assets/Projects/Modern Minimalist Living Room/living4.jpg",
+			"../src/assets/Projects/Modern Minimalist Living Room/living5.jpg"
+		]
+	},
+	{
+		"id": "p-002",
+		"title": "Luxury Bedroom Retreat",
+		"description": "An opulent bedroom design combining warm textures, rich colors, and premium furniture to create a relaxing and indulgent atmosphere.",
+		"images": [
+			"../src/assets/Projects/Luxury Bedroom Retreat/bedroom1.jpg",
+			"../src/assets/Projects/Luxury Bedroom Retreat/bedroom2.jpg",
+			"../src/assets/Projects/Luxury Bedroom Retreat/bedroom3.jpg",
+			"../src/assets/Projects/Luxury Bedroom Retreat/bedroom4.jpg",
+			"../src/assets/Projects/Luxury Bedroom Retreat/bedroom5.jpg",
+			"../src/assets/Projects/Luxury Bedroom Retreat/bedroom6.jpg"
+		]
+	},
+	{
+		"id": "p-003",
+		"title": "Contemporary Kitchen Design",
+		"description": "A contemporary kitchen featuring high-end appliances, sleek cabinetry, and a functional layout that balances style and efficiency.",
+		"images": [
+			"../src/assets/Projects/Contemporary Kitchen Design/kitchen1.jpg",
+			"../src/assets/Projects/Contemporary Kitchen Design/kitchen2.jpg",
+			"../src/assets/Projects/Contemporary Kitchen Design/kitchen3.jpg"
+		]
+	},
+
+	{
+		"id": "p-006",
+		"title": "Open Concept Dining Area",
+		"description": "A bright and airy dining space that blends modern furniture with warm accents, perfect for family meals and entertaining guests.",
+		"images": [
+			"../src/assets/Projects/Open Concept Dining Area/dining1.jpg",
+			"../src/assets/Projects/Open Concept Dining Area/dining2.jpg",
+			"../src/assets/Projects/Open Concept Dining Area/dining3.jpg"
+		]
+	}
+]

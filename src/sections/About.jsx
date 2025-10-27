@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const Jason = () => {
+const About = () => {
 	const [activeImage, setActiveImage] = useState(null);
 	const overlayRef = useRef(null);
 	const imageRef = useRef(null);
@@ -109,4 +109,4 @@ const Jason = () => {
 	);
 };
 
-export default Jason;
+export default About;

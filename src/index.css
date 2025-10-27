@@ -181,6 +181,96 @@ main {
 			}
 		}
 	}
+	.lucia-life-mobile {
+		@apply relative z-10 py-20 flex flex-col justify-center gap-6 w-full overflow-x-hidden;
+
+		h1 {
+			@apply text-yellow font-long uppercase text-5xl mb-10 text-center;
+		}
+
+		h2 {
+			@apply text-pink text-2xl mb-4 px-6 text-center;
+		}
+
+		p {
+			@apply text-white text-base px-6 text-center;
+		}
+
+		/* Hide any large-desktop specific text */
+		p:last-of-type {
+			@apply block md:hidden;
+		}
+
+		.lucia-1 {
+			@apply w-full h-64 mb-6;
+
+			img {
+				@apply w-full h-full object-cover object-center hover:scale-105 transition duration-500 ease-in-out;
+			}
+		}
+
+		.lucia-2 {
+			@apply w-full h-56 mb-6;
+
+			img {
+				@apply w-full h-full object-cover object-center hover:scale-105 transition duration-500 ease-in-out;
+			}
+		}
+
+		.lucia-3 {
+			@apply w-full h-72 mb-6;
+
+			img {
+				@apply w-full h-full object-cover object-center hover:scale-105 transition duration-500 ease-in-out;
+			}
+		}
+	}
+	/* for mobile  */
+	.lucia-life-mobile {
+		@apply relative z-10 py-20 flex flex-col justify-center gap-6 w-full overflow-x-hidden;
+
+		h1 {
+			@apply text-yellow font-long uppercase text-5xl mb-10 text-center;
+		}
+
+		h2 {
+			@apply text-pink text-2xl mb-4 px-6 text-center;
+		}
+
+		p {
+			@apply text-white text-base px-6 text-center;
+		}
+
+		/* Hide any large-desktop specific text */
+		p:last-of-type {
+			@apply block md:hidden;
+		}
+
+		.lucia-1 {
+			@apply w-full h-64 mb-6;
+
+			img {
+				@apply w-full h-full object-cover object-center hover:scale-105 transition duration-500 ease-in-out;
+			}
+		}
+
+		.lucia-2 {
+			@apply w-full h-56 mb-6;
+
+			img {
+				@apply w-full h-full object-cover object-center hover:scale-105 transition duration-500 ease-in-out;
+			}
+		}
+
+		.lucia-3 {
+			@apply w-full h-72 mb-6;
+
+			img {
+				@apply w-full h-full object-cover object-center hover:scale-105 transition duration-500 ease-in-out;
+			}
+		}
+	}
+
 	.post-card {
 		@apply relative flex justify-center items-center pb-80 shadow-2xl;
 
