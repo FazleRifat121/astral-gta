@@ -20,7 +20,7 @@ const App = () => {
 	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
-		// Detect mobile
+		// Detect mobile device
 		const handleResize = () => setIsMobile(window.innerWidth < 1024);
 		handleResize();
 		window.addEventListener("resize", handleResize);
@@ -37,15 +37,36 @@ const App = () => {
 
 	return (
 		<main>
+			{/* Navbar */}
 			<NavBar />
-			<Hero />
+
+			{/* Sections with matching IDs for scroll navigation */}
+			<section id="home">
+				<Hero />
+			</section>
+
 			<FirstVideo />
-			<About />
+			<section id="about">
+				<About />
+			</section>
+
 			<SecondVideo />
-			{isMobile ? <ProjectsMobile projectsData={projectsData} /> : <Projects />}
-			<PostCard />
-			<Final />
-			<Outro />
+			<section id="projects">
+				{isMobile ? (
+					<ProjectsMobile projectsData={projectsData} />
+				) : (
+					<Projects />
+				)}
+			</section>
+
+			<section id="philosophy">
+				<PostCard />
+				<Final />
+			</section>
+
+			<section id="contact">
+				<Outro />
+			</section>
 		</main>
 	);
 };

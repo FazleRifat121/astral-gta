@@ -26,7 +26,9 @@
 	--breakpoint-xs: 20rem;
 	--breakpoint-3xl: 120rem;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 body {
 	width: 100dvw;
 	overflow-x: hidden;

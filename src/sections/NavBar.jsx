@@ -7,7 +7,7 @@ import img3 from "../assets/nav/img3.jpeg";
 import img4 from "../assets/nav/img4.jpeg";
 import img5 from "../assets/nav/img5.jpeg";
 
-const navItems = ["Home", "About", "Projects", "Philosophy", "Contact"];
+const navItems = ["Home", "About", "Projects", "Contact"];
 const hoverImages = [img1, img2, img3, img4, img5];
 
 const NavBar = () => {
@@ -16,13 +16,12 @@ const NavBar = () => {
 	const [fadeImage, setFadeImage] = useState(logo);
 	const [logoVisible, setLogoVisible] = useState(false);
 
-	const toggleMenu = () => setIsOpen(!isOpen);
+	const toggleMenu = () => setIsOpen((prev) => !prev);
 
-	// Delay logo fade-in when menu opens
 	useEffect(() => {
 		if (isOpen) {
 			setLogoVisible(false);
-			const timer = setTimeout(() => setLogoVisible(true), 200); // 200ms delay
+			const timer = setTimeout(() => setLogoVisible(true), 200);
 			return () => clearTimeout(timer);
 		} else {
 			setLogoVisible(false);
@@ -39,10 +38,26 @@ const NavBar = () => {
 		setTimeout(() => setCurrentImage(logo), 50);
 	};
 
+	// ✅ Scroll smoothly to section
+	const handleNavClick = (item) => {
+		const sectionId = item.toLowerCase();
+		const section = document.getElementById(sectionId);
+		if (section) {
+			window.scrollTo({
+				top: section.offsetTop - 80, // offset for navbar height
+				behavior: "smooth",
+			});
+		}
+		setIsOpen(false); // close menu after clicking
+	};
+
 	return (
-		<nav className="fixed top-0 left-0 w-full flex justify-between items-center p-4 z-50 ">
+		<nav className="fixed top-0 left-0 w-full flex justify-between items-center p-4 z-[100]">
 			{/* Logo */}
-			<img src={logo} className="scale-90 w-32 md:w-52" alt="Logo" />
+			<a href="/">
+				{" "}
+				<img src={logo} className="scale-90 w-32 md:w-52" alt="Logo" />
+			</a>
 
 			{/* Hamburger Menu */}
 			<button onClick={toggleMenu}>
@@ -50,12 +65,15 @@ const NavBar = () => {
 			</button>
 
 			{/* Fullscreen Slider */}
-			<div className="fixed inset-0 w-full h-full flex z-50 pointer-events-none">
+			<div
+				className={`fixed inset-0 w-full h-full flex z-[99] transition-all duration-500
+					${isOpen ? "pointer-events-auto" : "pointer-events-none"}`}
+			>
 				{/* Left Image Panel */}
 				<div
-					className={`hidden md:flex md:w-1/2 h-full bg-black items-center justify-center pointer-events-auto
-            transform transition-transform duration-500 ease-in-out
-            ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+					className={`hidden md:flex md:w-1/2 h-full bg-black items-center justify-center
+					transform transition-transform duration-500 ease-in-out
+					${isOpen ? "translate-x-0" : "-translate-x-full"}`}
 				>
 					<img
 						src={fadeImage}
@@ -80,9 +98,9 @@ const NavBar = () => {
 
 				{/* Right Menu Panel */}
 				<div
-					className={`w-full md:w-1/2 h-full bg-white flex flex-col justify-center items-center relative pointer-events-auto
-            transform transition-transform duration-500 ease-in-out
-            ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+					className={`w-full md:w-1/2 h-full bg-white flex flex-col justify-center items-center relative
+					transform transition-transform duration-500 ease-in-out
+					${isOpen ? "translate-x-0" : "translate-x-full"}`}
 				>
 					<button
 						onClick={toggleMenu}
@@ -98,7 +116,7 @@ const NavBar = () => {
 								className="cursor-pointer font-semibold hover:text-blue-500"
 								onMouseEnter={() => handleMouseEnter(hoverImages[index])}
 								onMouseLeave={handleMouseLeave}
-								onClick={toggleMenu}
+								onClick={() => handleNavClick(item)}
 							>
 								{item}
 							</li>

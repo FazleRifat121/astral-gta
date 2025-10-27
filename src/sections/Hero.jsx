@@ -84,7 +84,7 @@ const Hero = () => {
 				<img src="/images/astral-logo.png" className="overlay-logo" />
 			</div>
 
-			<ComingSoon />
+			{/* <ComingSoon /> */}
 		</section>
 	);
 };
