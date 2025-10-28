@@ -88,7 +88,7 @@ const App = () => {
 				{/* <Final /> */}
 			</section>
 
-			<section id="contact" className="black-gradient-bg">
+			<section id="contact">
 				<Contact />
 				<Footer />
 			</section>

@@ -30,7 +30,7 @@ const SecondVideo = () => {
 				videoRef.current,
 				{
 					currentTime: videoRef.current.duration,
-					duration: 5,
+					duration: 3,
 					ease: "power1.inOut",
 				},
 				"<"
