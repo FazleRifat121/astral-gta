@@ -18,14 +18,19 @@ const SecondVideo = () => {
 			},
 		});
 
-		tl.to(".lucia", { opacity: 1, duration: 1, ease: "power1.inOut" });
+		tl.to(".lucia", {
+			opacity: 1,
+			duration: 1,
+
+			ease: "power1.inOut",
+		});
 
 		videoRef.current.onloadedmetadata = () => {
 			tl.to(
 				videoRef.current,
 				{
 					currentTime: videoRef.current.duration,
-					duration: 3,
+					duration: 5,
 					ease: "power1.inOut",
 				},
 				"<"

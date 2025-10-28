@@ -15,8 +15,19 @@ const NavBar = () => {
 	const [currentImage, setCurrentImage] = useState(logo);
 	const [fadeImage, setFadeImage] = useState(logo);
 	const [logoVisible, setLogoVisible] = useState(false);
+	const [scrolled, setScrolled] = useState(false); // ✅ for glow toggle
 
 	const toggleMenu = () => setIsOpen((prev) => !prev);
+
+	// ✅ Detect scroll for glow
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 50) setScrolled(true);
+			else setScrolled(false);
+		};
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
 	useEffect(() => {
 		if (isOpen) {
@@ -44,19 +55,24 @@ const NavBar = () => {
 		const section = document.getElementById(sectionId);
 		if (section) {
 			window.scrollTo({
-				top: section.offsetTop - 80, // offset for navbar height
+				top: section.offsetTop - 80,
 				behavior: "smooth",
 			});
 		}
-		setIsOpen(false); // close menu after clicking
+		setIsOpen(false);
 	};
 
 	return (
-		<nav className="fixed top-0 left-0 w-full flex justify-between items-center p-4 z-[100]">
-			{/* Logo */}
-			<a href="/">
-				{" "}
-				<img src={logo} className="scale-90 w-32 md:w-52" alt="Logo" />
+		<nav className="fixed top-0 left-0 w-full flex justify-between items-center p-4 z-[100] transition-all duration-300">
+			{/* Logo with glow effect when scrolled */}
+			<a href="/" className="transition-all duration-500">
+				<img
+					src={logo}
+					className={`scale-90 w-32 md:w-52 transition-all duration-500 ${
+						scrolled ? "drop-shadow-[0_0_12px_#008177] brightness-110" : ""
+					}`}
+					alt="Logo"
+				/>
 			</a>
 
 			{/* Hamburger Menu */}
