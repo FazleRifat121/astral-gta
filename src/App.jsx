@@ -8,10 +8,11 @@ import FirstVideo from "./sections/FirstVideo";
 import SecondVideo from "./sections/SecondVideo";
 import PostCard from "./sections/PostCard";
 import Final from "./sections/Final";
-import Outro from "./sections/Outro";
 import Projects from "./sections/Projects";
 import ProjectsMobile from "./sections/ProjectsMobile";
 import About from "./sections/About";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,8 +66,9 @@ const App = () => {
 			</section>
 
 			<section id="contact">
-				<Outro />
+				<Contact />
 			</section>
+			<Footer />
 		</main>
 	);
 };

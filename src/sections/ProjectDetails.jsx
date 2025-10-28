@@ -28,7 +28,7 @@ const ProjectDetails = ({ projectId, onBack }) => {
 			{onBack && (
 				<button
 					onClick={onBack}
-					className="flex items-center gap-2 text-white mb-4 sm:mb-6 hover:text-gray-300"
+					className="flex items-center gap-2 text-white mb-4 sm:mb-6 hover:text-gray-300 transition-colors"
 				>
 					<FaArrowLeft /> Back to Gallery
 				</button>

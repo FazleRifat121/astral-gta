@@ -23,7 +23,6 @@ const ProjectsMobile = ({ projectsData }) => {
 				{ scale: 0.9, opacity: 0 },
 				{ scale: 1, opacity: 1, duration: 0.5, ease: "power3.out" }
 			);
-			// Disable background scroll
 			document.body.style.overflow = "hidden";
 		} else {
 			gsap.to(overlayRef.current, {
@@ -31,7 +30,6 @@ const ProjectsMobile = ({ projectsData }) => {
 				duration: 0.4,
 				ease: "power2.inOut",
 			});
-			// Re-enable background scroll
 			document.body.style.overflow = "auto";
 		}
 	}, [activeProject, showGallery]);
@@ -39,7 +37,7 @@ const ProjectsMobile = ({ projectsData }) => {
 	if (!projectsData || projectsData.length === 0) return null;
 
 	return (
-		<section className="lucia-life-mobile px-5 py-10 min-h-screen lucia-life-content z-50 ">
+		<section className="lucia-life-mobile px-5 py-10 min-h-screen lucia-life-content z-50">
 			<h1>Projects</h1>
 			<h2 className="text-xl text-center mb-5">
 				Celestial Creations: Illuminating Your World
@@ -76,21 +74,16 @@ const ProjectsMobile = ({ projectsData }) => {
 						onClick={(e) => e.stopPropagation()}
 						className="bg-black rounded-2xl shadow-2xl max-w-xl w-full p-6 relative mx-4"
 					>
-						{/* Back button only when viewing individual project */}
-						{activeProject && (
-							<button
-								onClick={() => {
-									setActiveProject(null);
-									setShowGallery(true); // go back to gallery
-								}}
-								className="absolute top-4 left-4 text-white text-2xl p-2 rounded-full hover:bg-white/10 transition"
-							>
-								<FaArrowLeft />
-							</button>
-						)}
-
 						{/* Show individual project */}
-						{activeProject && <ProjectDetails projectId={activeProject} />}
+						{activeProject && (
+							<ProjectDetails
+								projectId={activeProject}
+								onBack={() => {
+									setActiveProject(null);
+									setShowGallery(true);
+								}}
+							/>
+						)}
 
 						{/* Show full gallery */}
 						{showGallery && !activeProject && (
@@ -113,7 +106,7 @@ const ProjectsMobile = ({ projectsData }) => {
 												alt={project.title}
 												className="w-full rounded-xl shadow-lg object-cover"
 											/>
-											<div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+											<div className="absolute inset-0 bg-black/30 flex items-center justify-center ">
 												<h3 className="text-white text-lg font-semibold">
 													{project.title}
 												</h3>
