@@ -29,7 +29,7 @@ const Contact = () => {
 	return (
 		<section
 			ref={sectionRef}
-			className="contact-section min-h-screen flex flex-col justify-center items-center px-6 py-16  text-white bg-black"
+			className="contact-section min-h-screen flex flex-col justify-center items-center px-6 py-16  text-white "
 		>
 			<div className="max-w-2xl w-full text-center space-y-8">
 				<h2 className="text-3xl md:text-5xl font-bold mb-6">Contact Us</h2>

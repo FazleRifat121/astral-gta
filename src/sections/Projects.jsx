@@ -73,7 +73,7 @@ const Projects = () => {
 			<div className="flex flex-col gap-5 items-end img-box lg:w-1/2 ps-10 mt-96">
 				{projectsData[0] && (
 					<div
-						className="lucia-1"
+						className="lucia-1 ml-10"
 						onClick={() => setActiveProject(projectsData[0].id)}
 					>
 						<img
@@ -99,7 +99,7 @@ const Projects = () => {
 
 			{/* Right Column Content & Image */}
 			<div className="lg:w-1/2 lucia-life-content">
-				<div className="max-w-xl lg:ps-32 ps-10">
+				<div className="max-w-2xl lg:ps-32 ps-10">
 					<h1>Projects</h1>
 					<h2>Celestial Creations: Illuminating Your World.</h2>
 					<p>

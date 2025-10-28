@@ -61,14 +61,14 @@ const App = () => {
 			</section>
 
 			<section id="philosophy">
-				<PostCard />
-				<Final />
+				{/* <PostCard /> */}
+				{/* <Final /> */}
 			</section>
 
-			<section id="contact">
+			<section id="contact black-gradient-bg ">
 				<Contact />
+				<Footer />
 			</section>
-			<Footer />
 		</main>
 	);
 };

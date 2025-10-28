@@ -10,7 +10,8 @@ const ComingSoon = () => {
 
 				<div className="text-wrapper">
 					<h3 className="gradient-title lg:mt-32">
-						Coming <br /> May 26th <br /> 2026
+						Transforming spaces <br className="hidden md:block" /> into timeless
+						<br className="hidden md:block" /> experiences.
 					</h3>
 				</div>
 

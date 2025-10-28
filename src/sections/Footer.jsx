@@ -1,6 +1,6 @@
 const Footer = () => {
 	return (
-		<footer className="overflow-hidden bg-black">
+		<footer className="overflow-hidden ">
 			{/* Bottom Credits */}
 			<div className=" mt-6 py-6 text-center text-xs text-gray-500">
 				<p>
