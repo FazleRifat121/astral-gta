@@ -7,7 +7,7 @@ import img3 from "../assets/nav/img3.jpeg";
 import img4 from "../assets/nav/img4.jpeg";
 import img5 from "../assets/nav/img5.jpeg";
 
-const navItems = ["Home", "About", "Projects", "Contact"];
+const navItems = ["Home", "About", "Projects", "Services", "Contact"];
 const hoverImages = [img1, img2, img3, img4, img5];
 
 const NavBar = () => {

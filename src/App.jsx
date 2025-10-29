@@ -14,6 +14,7 @@ import ProjectsMobile from "./sections/ProjectsMobile";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import Services from "./sections/Services";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,7 +84,8 @@ const App = () => {
 				)}
 			</section>
 
-			<section id="philosophy">
+			<section id="services">
+				<Services />
 				{/* <PostCard /> */}
 				{/* <Final /> */}
 			</section>
