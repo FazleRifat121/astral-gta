@@ -56,7 +56,11 @@ const Hero = () => {
 	return (
 		<section className="hero-section">
 			<div className="size-full mask-wrapper">
-				<img src="/images/hero-bg.png" alt="background" className="scale-out" />
+				<img
+					src="/images/hero-ex1.jpg"
+					alt="background"
+					className="scale-out "
+				/>
 				<img
 					src="/images/astral-text.webp"
 					alt="hero-logo"

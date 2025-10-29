@@ -77,7 +77,7 @@ const NavBar = () => {
 
 			{/* Hamburger Menu */}
 			<button onClick={toggleMenu}>
-				<img src="/images/menu.svg" className="w-10" alt="Menu" />
+				<img src="/images/menu.svg" className="w-10 " alt="Menu" />
 			</button>
 
 			{/* Fullscreen Slider */}
@@ -129,7 +129,7 @@ const NavBar = () => {
 						{navItems.map((item, index) => (
 							<li
 								key={item}
-								className="cursor-pointer font-semibold hover:text-blue-500"
+								className="cursor-pointer font-semibold hover:text-pink"
 								onMouseEnter={() => handleMouseEnter(hoverImages[index])}
 								onMouseLeave={handleMouseLeave}
 								onClick={() => handleNavClick(item)}
