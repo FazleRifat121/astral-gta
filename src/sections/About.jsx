@@ -34,7 +34,6 @@ const About = () => {
 		});
 	});
 
-	// animate open/close image
 	useEffect(() => {
 		if (activeImage) {
 			gsap.to(overlayRef.current, {
@@ -57,8 +56,9 @@ const About = () => {
 	}, [activeImage]);
 
 	return (
-		<section className="jason">
-			<div className="max-w-lg jason-content">
+		<section className="jason flex flex-col md:flex-row items-start justify-between gap-10">
+			{/* Left side: Text content */}
+			<div className="max-w-2xl jason-content">
 				<h1>About</h1>
 				<h2>Crafting Spaces That Speak Without Words.</h2>
 				<p>
@@ -67,26 +67,32 @@ const About = () => {
 					that unfolds through light, texture, and form. Our mission is to bring
 					those stories to life with a balance of beauty, function, and soul.
 				</p>
-
-				<div className="jason-2">
-					<img
-						src="/images/img2.jpg"
-						onClick={() => setActiveImage("/images/img2.jpg")}
-					/>
-				</div>
 			</div>
 
-			<div className="space-y-5 mt-96 img-box">
-				<div className="jason-1">
+			{/* Right side: 2x2 collage grid */}
+			<div className="img-box grid grid-cols-2 gap-4 md:w-1/2 mt-56 md:mt-0">
+				<div className="jason-1 overflow-hidden ">
 					<img
 						src="/images/img1.jpg"
 						onClick={() => setActiveImage("/images/img1.jpg")}
 					/>
 				</div>
-				<div className="jason-3">
+				<div className="jason-1 overflow-hidden ">
+					<img
+						src="/images/img2.jpg"
+						onClick={() => setActiveImage("/images/img2.jpg")}
+					/>
+				</div>
+				<div className="jason-1 overflow-hidden ">
 					<img
 						src="/images/img3.jpg"
 						onClick={() => setActiveImage("/images/img3.jpg")}
+					/>
+				</div>
+				<div className="jason-1 overflow-hidden ">
+					<img
+						src="/images/img4.jpg"
+						onClick={() => setActiveImage("/images/img4.jpg")}
 					/>
 				</div>
 			</div>
