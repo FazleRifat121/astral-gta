@@ -147,7 +147,7 @@ main {
 		@apply relative;
 	}
 	.lucia-life {
-		@apply relative z-10 py-40 mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden;
+		@apply relative z-10 py-40 mt-60  flex-col justify-between items-center gap-5 w-dvw overflow-x-hidden;
 
 		h1 {
 			@apply text-yellow font-long uppercase text-8xl mb-20;
@@ -162,7 +162,7 @@ main {
 			@apply md:hidden block xl:block;
 		}
 		.lucia-1 {
-			@apply bg-yellow lg:h-[80vh] w-auto -translate-x-5;
+			@apply bg-yellow  w-auto;
 
 			img {
 				@apply size-full object-cover [object-position:85%_center] hover:scale-[0.98] transition duration-700 ease-in-out;

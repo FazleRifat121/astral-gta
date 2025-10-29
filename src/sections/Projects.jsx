@@ -16,7 +16,7 @@ const Projects = () => {
 	const [showGallery, setShowGallery] = useState(false);
 	const [projectsData, setProjectsData] = useState([]);
 
-	// Fetch projects.json from public folder
+	// Fetch projects.json
 	useEffect(() => {
 		fetch("/projects.json")
 			.then((res) => res.json())
@@ -68,74 +68,60 @@ const Projects = () => {
 	}, [activeProject, showGallery]);
 
 	return (
-		<section className="lucia-life" ref={sectionRef}>
-			{/* Left Column Images */}
-			<div className="flex flex-col gap-5 items-end img-box lg:w-1/2 ps-10 mt-96">
-				{projectsData[0] && (
-					<div
-						className="lucia-1 ml-10"
-						onClick={() => setActiveProject(projectsData[0].id)}
-					>
-						<img
-							src={projectsData[0].images[0]}
-							alt={projectsData[0].title}
-							className="cursor-pointer"
-						/>
-					</div>
-				)}
-				{projectsData[1] && (
-					<div
-						className="lucia-3"
-						onClick={() => setActiveProject(projectsData[1].id)}
-					>
-						<img
-							src={projectsData[1].images[0]}
-							alt={projectsData[1].title}
-							className="cursor-pointer"
-						/>
-					</div>
-				)}
+		<section className="lucia-life text-center px-6 md:px-16" ref={sectionRef}>
+			{/* Centered Text */}
+			<div className="max-w-6xl mx-auto ">
+				<h1>Projects</h1>
+				<h2 className="mt-2 ml-15">
+					Celestial Creations: Illuminating Your World.
+				</h2>
+				<p className="mt-4 text-gray-300 leading-relaxed ml-20">
+					Step into a gallery where design transcends the ordinary and embraces
+					the infinite. Our project portfolio showcases how we've transformed
+					diverse spaces into harmonious sanctuaries, each echoing the serene
+					beauty of the cosmos. From minimalist retreats to vibrant
+					galactic-inspired environments, discover the artistry behind our
+					Astral Interiors.
+				</p>
 			</div>
 
-			{/* Right Column Content & Image */}
-			<div className="lg:w-1/2 lucia-life-content">
-				<div className="max-w-2xl lg:ps-32 ps-10">
-					<h1>Projects</h1>
-					<h2>Celestial Creations: Illuminating Your World.</h2>
-					<p>
-						Step into a gallery where design transcends the ordinary and
-						embraces the infinite. Our project portfolio showcases how we've
-						transformed diverse spaces into harmonious sanctuaries, each echoing
-						the serene beauty of the cosmos. From minimalist retreats to vibrant
-						galactic-inspired environments, discover the artistry behind our
-						Astral Interiors.
-					</p>
-
-					{/* Gallery Button */}
-					<button
-						onClick={() => setShowGallery(true)}
-						className="mt-6 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
-					>
-						View Gallery
-					</button>
-				</div>
-
-				{/* Optional right-side project image */}
-				{projectsData[2] && (
+			{/* Image Grid Below Text */}
+			<div className="img-box grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16 place-items-center md:mt-60">
+				{projectsData.slice(0, 3).map((project) => (
 					<div
-						className="lucia-2 mt-10"
-						onClick={() => setActiveProject(projectsData[2].id)}
+						key={project.id}
+						className="relative cursor-pointer group overflow-hidden rounded-xl"
+						onClick={() => setActiveProject(project.id)}
 					>
 						<img
-							src={projectsData[2].images[0]}
-							alt={projectsData[2].title}
-							className="cursor-pointer"
+							src={
+								project.images[
+									Math.floor(Math.random() * project.images.length)
+								]
+							}
+							alt={project.title}
+							className="lucia-1"
 						/>
+						<div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+							<h3 className="text-white text-lg font-semibold">
+								{project.title}
+							</h3>
+						</div>
 					</div>
-				)}
+				))}
 			</div>
 
-			{/* Overlay for Gallery or Project Details */}
+			{/* Button Below Grid */}
+			<div>
+				<button
+					onClick={() => setShowGallery(true)}
+					className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition -mt-44"
+				>
+					View Gallery
+				</button>
+			</div>
+
+			{/* Overlay */}
 			{(activeProject || showGallery) && (
 				<div
 					ref={overlayRef}
@@ -152,7 +138,6 @@ const Projects = () => {
 					>
 						{activeProject ? (
 							<>
-								{/* Back to gallery */}
 								<button
 									onClick={() => {
 										setShowGallery(true);
@@ -168,7 +153,7 @@ const Projects = () => {
 							showGallery && (
 								<div>
 									<h1 className="text-center">Our Projects</h1>
-									<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+									<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
 										{projectsData.map((project) => (
 											<div
 												key={project.id}
