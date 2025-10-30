@@ -28,7 +28,8 @@ const Slider = () => {
 	const swiperRef = useRef();
 
 	return (
-		<div className="w-full py-10 overflow-hidden">
+		<div className="w-full py-10 overflow-hidden lucia-life">
+			<h1 className="text-center">Our Featured Clients</h1>
 			<Swiper
 				modules={[Autoplay]}
 				onSwiper={(swiper) => (swiperRef.current = swiper)}

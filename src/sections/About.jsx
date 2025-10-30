@@ -56,7 +56,7 @@ const About = () => {
 	}, [activeImage]);
 
 	return (
-		<section className="jason flex flex-col md:flex-row items-start justify-between gap-10">
+		<section className="jason flex flex-col lg:flex-row items-start justify-between gap-10">
 			{/* Left side: Text content */}
 			<div className="max-w-2xl jason-content">
 				<h1>About</h1>
@@ -70,7 +70,7 @@ const About = () => {
 			</div>
 
 			{/* Right side: 2x2 collage grid */}
-			<div className="img-box grid grid-cols-2 gap-4 md:w-1/2 mt-56 md:mt-32">
+			<div className="img-box grid grid-cols-2 gap-4 lg:w-1/2 mt-56 lg:mt-56">
 				<div className="jason-1 overflow-hidden ">
 					<img
 						src="/images/img1.jpg"
