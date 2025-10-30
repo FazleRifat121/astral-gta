@@ -70,7 +70,7 @@ const About = () => {
 			</div>
 
 			{/* Right side: 2x2 collage grid */}
-			<div className="img-box grid grid-cols-2 gap-4 md:w-1/2 mt-56 md:mt-0">
+			<div className="img-box grid grid-cols-2 gap-4 md:w-1/2 mt-56 md:mt-32">
 				<div className="jason-1 overflow-hidden ">
 					<img
 						src="/images/img1.jpg"

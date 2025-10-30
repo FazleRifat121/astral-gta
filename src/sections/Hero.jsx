@@ -61,11 +61,11 @@ const Hero = () => {
 					alt="background"
 					className="scale-out "
 				/>
-				<img
+				{/* <img
 					src="/images/astral-text.webp"
 					alt="hero-logo"
 					className="title-logo fade-out left-80 top-14"
-				/>
+				/> */}
 				{/* <img
 					src="/images/watch-trailer.png"
 					alt="trailer"

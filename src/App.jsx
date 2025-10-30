@@ -15,6 +15,7 @@ import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import Services from "./sections/Services";
+import Slider from "./sections/Slider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,7 +90,7 @@ const App = () => {
 				{/* <PostCard /> */}
 				{/* <Final /> */}
 			</section>
-
+			<Slider />
 			<section id="contact">
 				<Contact />
 				<Footer />

@@ -350,3 +350,24 @@ main {
 .lucia-life-content {
 	background: radial-gradient(ellipse, #111117 20%, transparent 70%);
 }
+/* Base slide */
+.swiper-slide img {
+	transform: scale(0.8);
+	opacity: 0.6;
+	transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Active slide grows */
+.swiper-slide-active img {
+	transform: scale(1.25);
+	opacity: 1;
+	transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Slides next to active shrink smoothly */
+.swiper-slide-next img,
+.swiper-slide-prev img {
+	transform: scale(0.9);
+	opacity: 0.8;
+	transition: transform 0.8s ease, opacity 0.8s ease;
+}
